@@ -33,7 +33,11 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        type: 'asset/resource',
+        use: [
+          {
+            loader: 'svg-loader'
+          }
+        ]
       },
     ],
   },
